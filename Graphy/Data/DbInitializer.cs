@@ -16,7 +16,8 @@ namespace Graphy.Data
             {
                 new() {Code = "AAPL", Price = 137.09m, CapturedAt = DateTime.UtcNow},
                 new() {Code = "MSFT", Price = 238.93m, CapturedAt = DateTime.UtcNow},
-                new() {Code = "BLCKBRD", Price = 280.91m, CapturedAt = DateTime.UtcNow}
+                new() {Code = "BLCKBRD", Price = 280.91m, CapturedAt = DateTime.UtcNow},
+                new() {Code = "GOOGL", Price = 2069.66m, CapturedAt = DateTime.UtcNow}
             };
             ctx.Stocks.AddRange(stocks);
             ctx.SaveChanges();
@@ -40,6 +41,12 @@ namespace Graphy.Data
                     Name = "Blackbird Tech", StockData = stocks[2],
                     Description =
                         "Blackbird Tech is a provider of luxury software services headquartered in Kyiv, Ukraine."
+                },
+                new()
+                {
+                    Name = "Alphabet Inc.",
+                    StockData = stocks[3],
+                    Description = "Alphabet Inc. is an American multinational conglomerate headquartered in Mountain View, California. It was created through a restructuring of Google on October 2, 2015, and became the parent company of Google and several former Google subsidiaries."
                 }
             };
             ctx.Companies.AddRange(companies);
